@@ -58,7 +58,7 @@ class ScoreTable extends HTMLElement{
           <tr>
               <td>${dataLiga.position}</td>
               <td class="team">`;
-             dataLiga.team.crestUrl != null || dataLiga.team.crestUrl ?  renderHTML += `<svg class="svgEmblem"><image xlink:href="${dataLiga.team.crestUrl}" class="imgEmblem" alt="${dataLiga.team.name} Emblem"/></svg>` :  renderHTML += ''
+             dataLiga.team.crestUrl != null || dataLiga.team.crestUrl ?  renderHTML += `<svg class="svgEmblem"><image xlink:href="${dataLiga.team.crestUrl.replace(/^http:\/\//i, 'https://')}" class="imgEmblem" alt="${dataLiga.team.name} Emblem"/></svg>` :  renderHTML += ''
               renderHTML += `<a class="loaded" team-id="${dataLiga.team.id}" href="#teamid=${dataLiga.team.id}">${dataLiga.team.name}</a></td>
               <td class="centered">${dataLiga.playedGames}</td>
               <td class="centered">${dataLiga.won}</td>

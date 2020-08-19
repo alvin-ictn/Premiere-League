@@ -40,7 +40,7 @@ class ClubInfo extends HTMLElement{
     		data-caption="A picture of a way with a group of trees in a park" 
 			viewBox="0 0 10 10"
 			width="100%"
-			src="${this._datas.crestUrl || `./src/img/banner/place.svg`}" 
+			src="${this._datas.crestUrl.replace(/^http:\/\//i, 'https://') || `./src/img/banner/place.svg`}" 
 			alt="infowhen offline">
 		</div>
       	<div class="col s12 m8">
