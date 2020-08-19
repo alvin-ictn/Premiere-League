@@ -98,7 +98,9 @@ class ClubInfo extends HTMLElement{
 				</li>
 			</ul>        
 		</div>
-      	<div class="col s12 m12">
+				<div class="col s12 m12">`;
+				if(this._datas.squad.length){	
+					renderHTML +=`
         	<table>
          		<thead>
              		<tr>
@@ -110,7 +112,7 @@ class ClubInfo extends HTMLElement{
 					</tr>
             	</thead>
 							<tbody>`;
-							
+						
 					this._datas.squad.forEach(dataMember=>{
 						renderHTML += `<tr>
 						<td>${dataMember.shirtNumber ? dataMember.shirtNumber : " "}</td>
@@ -120,10 +122,27 @@ class ClubInfo extends HTMLElement{
 						<td>${dataMember.role}</td>
 					</tr>`
 					})
+
+					renderHTML += `</tbody>
+					</table>
+				</div>`
+				}else {
+					renderHTML += `        <div class="preloader-wrapper empty big active">
+          <div class="spinner-layer spinner-red-only">
+              <div class="circle-clipper left black">
+              </div>
+              <div class="gap-patch">
+                  <div class="circle"></div>
+              </div>
+              <div class="circle-clipper right white">
+      
+              </div>
+          </div>
+        </div>
+        <h3 class="center">Squad Data is Missing</h3>`
+				}
 	renderHTML += `
-				</tbody>
-			</table>
-		</div>
+				
 		<div class="fixed-action-btn" id="floating-bt" class="row"></div>
 	</div>
 </div>`

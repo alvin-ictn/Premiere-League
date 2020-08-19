@@ -67,12 +67,19 @@ body {
 .tabs .tab{
   flex-grow:1;
 }
+
 .preloader-wrapper.big{
   margin-top:35vh;
   display:block;
   margin-left: auto;
   margin-right: auto;
+}
 
+.preloader-wrapper.big.empty{
+  margin-top:5vh;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-image {

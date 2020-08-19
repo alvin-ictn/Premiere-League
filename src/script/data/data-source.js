@@ -86,12 +86,7 @@ class DataSource {
                 console.log(`Error : ${err}`);
             })
         }
-        return fetch(`${this.baseUrl}teams/${this.teamId}`, {
-            method: 'GET',
-            headers: {
-                'X-Auth-Token': this.token,
-            }
-        })
+        Promise.resolve(this.fetchApi(`${this.baseUrl}teams/${this.teamId}`))
         .then(response => {
             return response.json()
         })
