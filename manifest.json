@@ -1,0 +1,22 @@
+{
+  "name": "Premiere League",
+  "short_name": "Liga Inggris",
+  "description": "Information of football match and score",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#0277bd",
+  "background_color": "#0277bd",
+  "gcm_sender_id":"657917090225",
+  "icons": [
+    {
+        "src": "./src/img/logo/icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+    },
+    {
+        "src": "./src/img/logo/splash.png",
+        "sizes": "1000x1000 ",
+        "type": "image/png"
+    }
+  ]
+}

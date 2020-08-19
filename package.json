@@ -1,0 +1,37 @@
+{
+  "name": "premiere-league",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start-dev": "webpack-dev-server --config webpack.dev.js --open webpack --display-error-details",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.3",
+    "css-loader": "^3.6.0",
+    "firebase-tools": "^8.4.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "moment": "^2.26.0",
+    "style-loader": "^1.2.1",
+    "web-push": "^3.4.4",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-copy-plugin": "0.0.4",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "http-server": "^0.12.3",
+    "idb": "^5.0.4",
+    "materialize-css": "^1.0.0-rc.2",
+    "regenerator-runtime": "^0.13.5"
+  }
+}

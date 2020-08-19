@@ -1,0 +1,167 @@
+body {
+   background: #f5f5f5 ;
+ }
+ 
+ table.highlight>tbody>tr:hover{
+   background-color:rgba(35, 20, 20, 0.1)
+ }
+ 
+ table.striped>tbody>tr:nth-child(odd){
+   background-color:rgba(35, 20, 20, 0.1)
+ }
+ 
+ .tabs {
+   background-color: transparent !important ; 
+ }
+ 
+ table  td,th {
+   padding:15px 2px;
+ }
+ 
+ table td.topicInfo {
+   font-weight:bold;
+   text-align:center;
+ }
+ 
+ table td.text-color-blue {
+   color:#0f4c75;
+ }
+ 
+ table td.text-color-red {
+   color:#e84a5f;
+ }
+ 
+ table td.text-color-green {
+   color:#24a19c;
+ }
+ 
+ table td.text-color-brown {
+   color:#ba7967;
+ }
+ 
+ table tbody tr td.team{
+   display:flex;
+ }
+ 
+ table tbody tr td.numGF {
+   color:green;
+ }
+ 
+ table tbody tr td.numGA{
+   color:red;
+ }
+ 
+ table tbody tr td.numPts{
+   font-weight: bold;
+ }
+ 
+ .container .liga{
+   margin-top:20px;
+ }
+
+.tabs{
+  display: -webkit-flex;
+  display:flex;
+}
+
+.tabs .tab{
+  flex-grow:1;
+}
+.preloader-wrapper.big{
+  margin-top:35vh;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.card-image {
+  width: 12vh;
+  padding-left: 20px;
+}
+
+.card.horizontal{
+  height:15vh;
+  width:31vw;
+  margin:20px;
+  place-items: center;
+}
+
+saved-team .container {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.fixed-action-btn .btn-floating{
+    display:flex;
+    width:70px;
+    height:70px;
+    justify-content:center;
+}
+
+.white-svg{
+  fill:white;
+  transform: scale(0.3);
+}
+
+svg image{
+  overflow:auto;
+}
+
+.sidenav-trigger{
+	font-size:3vh;
+}
+
+nav .brand-logo{
+	font-size:calc(1.2rem + 0.8vw);
+}
+
+ @media  only screen and (max-width:449px){
+  .container#body-content {
+    width:100%;
+  }
+   tr {
+     font-size: calc(100vw * 0.028125)
+   }
+   .svgEmblem, .svgEmblem .imgEmblem{
+     width:0;
+     height:0;
+   }
+
+   .card.horizontal{
+    width:100%;
+  }
+ }
+
+ @media (min-width:450px) and (max-width: 600px) { 
+   .container#body-content {
+     width:100%;
+   }
+   .svgEmblem, .svgEmblem .imgEmblem{
+     width:0;
+     height:0;
+   }
+   .card.horizontal{
+    width:100%;
+  }
+ }
+ 
+ @media (min-width: 601px) {
+   .svgEmblem, .svgEmblem .imgEmblem{
+     width:20px;
+     height:20px;
+     margin-right:5px;
+   }
+ 
+   td, td a {
+     vertical-align: -webkit-baseline-middle;
+   }
+ }
+ 
+ @media (min-width: 1600px) {
+   .svgEmblem, .svgEmblem .imgEmblem{
+     width:20px;
+     height:20px;
+   }
+ }
