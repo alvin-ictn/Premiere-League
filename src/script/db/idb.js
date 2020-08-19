@@ -17,7 +17,7 @@ function saveFavorite(team) {
       // Define StoreName
       const store = tx.objectStore("favorite");
       // Add Data 'favorite' to objectStore 'favorite'
-      store.add(team);
+      store.put(team);
       return tx.complete;
     })
     .then( () => {

@@ -27,7 +27,7 @@ caching.then((workbox) => {
   workbox.routing.registerRoute(
     new RegExp('https://api.football-data.org/v2/'),
     new workbox.strategies.NetworkFirst({
-      networkTimeoutSeconds: 5,
+      networkTimeoutSeconds: 15,
       cacheName: 'football-api'
     })
   )
