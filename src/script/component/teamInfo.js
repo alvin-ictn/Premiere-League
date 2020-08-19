@@ -40,7 +40,7 @@ class ClubInfo extends HTMLElement{
     		data-caption="A picture of a way with a group of trees in a park" 
 			viewBox="0 0 10 10"
 			width="100%"
-			src="${this._datas.crestUrl.replace(/^http:\/\//i, 'https://') || `./src/img/banner/place.svg`}" 
+			src="${this._datas.crestUrl ? this._datas.crestUrl.replace(/^http:\/\//i, 'https://') :`./src/img/banner/place.svg`}" 
 			alt="infowhen offline">
 		</div>
       	<div class="col s12 m8">
@@ -109,7 +109,8 @@ class ClubInfo extends HTMLElement{
 						<th>Role</th>
 					</tr>
             	</thead>
-            	<tbody>`;
+							<tbody>`;
+							
 					this._datas.squad.forEach(dataMember=>{
 						renderHTML += `<tr>
 						<td>${dataMember.shirtNumber ? dataMember.shirtNumber : " "}</td>

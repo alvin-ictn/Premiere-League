@@ -9,7 +9,6 @@ function registerService(){
 				return registration;
 			})
 			.then(reg => {
-				console.log(reg)
 				let serviceWorker;
 				if (reg.installing) {
 					serviceWorker = reg.installing;

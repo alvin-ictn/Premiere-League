@@ -8,6 +8,13 @@ class DataSource {
         this.token = '4358e7de8802477f876b7710250a68c2';
     }
     
+    async fetchApi(url) {    
+        return fetch(url, {
+          headers: {
+            'X-Auth-Token': this.token,
+          }
+        });
+      }
     // Fungsi Score Table untuk melihat perolehan score saat ini
     async scoreTable(){
         if ("caches" in window) {
@@ -32,13 +39,8 @@ class DataSource {
             })
         }
       
-        // Fetch Data dari API
-        return fetch(`${this.baseUrl}competitions/${this.years}/standings`, {
-            method: 'GET',
-            headers: {
-                'X-Auth-Token': this.token,
-            }
-        })
+        // Fetch Data dari API 
+        Promise.resolve(this.fetchApi(`${this.baseUrl}competitions/${this.years}/standings`))
         .then( response => {
             return response.json();
         })
