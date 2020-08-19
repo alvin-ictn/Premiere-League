@@ -1,6 +1,6 @@
 {
   "name": "Premiere League",
-  "short_name": "Liga Inggris",
+  "short_name": "Premiere-League",
   "description": "Information of football match and score",
   "start_url": "/index.html",
   "display": "standalone",
