@@ -7,7 +7,6 @@ class ScoreTable extends HTMLElement{
 
     this._datas = datas;
     this.ScoreTable();
-    //this.teamAction();
   }
   //preload function
   connectedCallback() {
@@ -28,6 +27,7 @@ class ScoreTable extends HTMLElement{
   }
   //Show Score Table
     ScoreTable(){
+      console.log(this._datas)
         let renderHTML = `<div class="container">
 <ul id="tabs-swipe-demo" class="tabs">
   <li class="tab col s3"><a href="#total">TOTAL</a></li>

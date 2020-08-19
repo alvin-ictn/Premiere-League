@@ -35,7 +35,9 @@ class DataSource {
                 }
             })
             .catch( err => {
-            console.log(`Error : ${err}`);
+                let scoreTable = document.querySelector('score-table');
+                console.log(error);
+                scoreTable.table = "FAIL";
             })
         }
       
@@ -62,7 +64,9 @@ class DataSource {
             targetTab.style.height = `${getTable[0].clientHeight}px`;
           })
           .catch(error=>{
+            let scoreTable = document.querySelector('score-table');
             console.log(error);
+            scoreTable.table = "FAIL";
         })
     }
 
@@ -83,7 +87,9 @@ class DataSource {
                 }
             })
             .catch( err => {
+                let clubInfo = document.querySelector('football-club');
                 console.log(`Error : ${err}`);
+                clubInfo.detailInfo = "FAIL";
             })
         }
         Promise.resolve(this.fetchApi(`${this.baseUrl}teams/${this.teamId}`))
@@ -104,7 +110,9 @@ class DataSource {
             var instances2 = M.Collapsible.init(y);
         })
         .catch(error => {
-            console.error(error);
+            let clubInfo = document.querySelector('football-club');
+            console.log(`Error : ${err}`);
+            clubInfo.detailInfo = "FAIL";
         });
     }
 

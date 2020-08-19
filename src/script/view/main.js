@@ -16,10 +16,11 @@ class AppArea extends HTMLElement {
   
   render() {
     this.innerHTML = '';
+    let site;
     try{
-      var site = this._content.includes("football-club") || this._content.includes("saved-team") ? this._content.split('_')[0] : this._content 
+      site = this._content.includes("football-club") || this._content.includes("saved-team") ? this._content.split('_')[0] : this._content 
     }catch{
-      var site = this._content
+      site = this._content
     }
     const contentElement = document.createElement(`${site}`);
     this.appendChild(contentElement);

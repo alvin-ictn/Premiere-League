@@ -10,7 +10,7 @@ class HomeScreen extends HTMLElement {
         display: flex;
         justify-content: center;
         width:100%;">
-        <img width="100%" src="./src/img/banner/banner.png">
+        <img width="100%" src="./src/img/banner/banner.png" alt="banner Premiere League ada Singa injek Bola">
       </div>
       <div style="font-size:1.2em">
         <p>Fulham menjadi tim terakhir yang sukses promosi ke Liga Primer Inggris musim 2020/2021 setelah mengalahkan Brentford pada partai play-off divisi Championship.</p>
