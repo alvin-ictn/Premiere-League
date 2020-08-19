@@ -33,7 +33,6 @@ class ClubInfo extends HTMLElement{
   }
   //Show Score Table
 	ClubInfo(){
-		console.log(this._datas)
 		if(this._datas == "FAIL"){
 			this.innerHTML = `
         <div class="container center">
