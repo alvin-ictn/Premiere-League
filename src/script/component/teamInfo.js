@@ -33,6 +33,15 @@ class ClubInfo extends HTMLElement{
   }
   //Show Score Table
 	ClubInfo(){
+		console.log(this._datas)
+		if(this._datas == "FAIL"){
+			this.innerHTML = `
+        <div class="container center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><circle cx="300" cy="300" r="140" fill="none" stroke="#2196F3" stroke-width="30"/><path fill="none" stroke="#2196F3" stroke-width="20" d="M300 200v150m0 20v20"/>
+        <text fill="rgba(33, 150, 243,1)" color="#2196F3" font-family="sans-serif" font-size="60" dy="10.5" font-weight="bold" x="50%" y="85%" text-anchor="middle">Connection Problem</text>
+        </svg>
+        </div>`
+		}else{
 		let renderHTML = `
 <div class="container liga">
 	<h4>${this._datas.name}</h4> <div class="row">
@@ -149,6 +158,7 @@ class ClubInfo extends HTMLElement{
   //show data
   this.innerHTML = renderHTML;
 	}
+}
 	
 	floatingBt() {
     getByIdSaved(this._datas.id)
@@ -183,7 +193,8 @@ class ClubInfo extends HTMLElement{
           })
         }
       });
-  }
+	}
+
 }
 
 customElements.define('football-club', ClubInfo);

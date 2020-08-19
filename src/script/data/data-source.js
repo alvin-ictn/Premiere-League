@@ -109,7 +109,7 @@ class DataSource {
             var instances = M.Materialbox.init(x);
             var instances2 = M.Collapsible.init(y);
         })
-        .catch(error => {
+        .catch(err => {
             let clubInfo = document.querySelector('football-club');
             console.log(`Error : ${err}`);
             clubInfo.detailInfo = "FAIL";
