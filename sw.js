@@ -24,10 +24,10 @@ caching.then((workbox) => {
   ]);  
 
   workbox.routing.registerRoute(
-    new RegExp('https://api.football-data.org/v2/'),
+    new RegExp('https://api.football-data.org/'),
     new workbox.strategies.NetworkFirst({
       networkTimeoutSeconds: 15,
-      cacheName: 'football-api'
+      cacheName: 'footballleague-info'
     })
   )
 
