@@ -42,7 +42,7 @@ class DataSource {
         }
       
         // Fetch Data dari API 
-        Promise.resolve(this.fetchApi(`${this.baseUrl}competitions/${this.years}/standings`))
+        await this.fetchApi(`${this.baseUrl}competitions/${this.years}/standings`)
         .then( response => {
             return response.json();
         })
@@ -92,7 +92,7 @@ class DataSource {
                 //clubInfo.detailInfo = "FAIL";
             })
         }
-        Promise.resolve(this.fetchApi(`${this.baseUrl}teams/${this.teamId}`))
+        await this.fetchApi(`${this.baseUrl}teams/${this.teamId}`)
         .then(response => {
             return response.json()
         })
