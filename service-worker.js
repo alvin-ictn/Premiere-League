@@ -16,7 +16,7 @@ caching.then((workbox) => {
     { url: "./bundle.js", revision: '1' },
     { url: "./src/img/banner/banner.png", revision: '1' },
     { url: "./src/img/banner/place.svg", revision: '1' },
-	{ url: "./src/img/banner/no-internet.svg", revision: '1' },
+  	{ url: "./src/img/banner/no-internet.svg", revision: '1' },
     { url: "./src/img/icon/save.svg", revision: '1' },
     { url: "./src/img/icon/trash.svg", revision: '1' },
     { url: "./src/img/logo/icon.png", revision: '1' },
@@ -27,7 +27,7 @@ caching.then((workbox) => {
   workbox.routing.registerRoute(
     new RegExp('https://api.football-data.org/'),
     new workbox.strategies.NetworkFirst({
-      networkTimeoutSeconds: 15,
+      networkTimeoutSeconds: 10,
       cacheName: 'footballleague-fetchdata'
     })
   )

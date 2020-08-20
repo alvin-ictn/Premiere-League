@@ -129,11 +129,6 @@ svg.error-nocontent{
   height:120vw;
 }
 
-svg circle{
-  cx:50%;
-  cy:50%;
-}
-
  @media  only screen and (max-width:449px){
   .container#body-content {
     width:100%;
