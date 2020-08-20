@@ -36,8 +36,8 @@ class DataSource {
             })
             .catch( err => {
                 let scoreTable = document.querySelector('score-table');
-                console.log(error);
-                scoreTable.table = "FAIL";
+                console.log(err);
+                //scoreTable.table = "FAIL";
             })
         }
       
@@ -66,7 +66,7 @@ class DataSource {
           .catch(error=>{
             let scoreTable = document.querySelector('score-table');
             console.log(error);
-            scoreTable.table = "FAIL";
+            //scoreTable.table = "FAIL";
         })
     }
 
@@ -89,7 +89,7 @@ class DataSource {
             .catch( err => {
                 let clubInfo = document.querySelector('football-club');
                 console.log(`Error : ${err}`);
-                clubInfo.detailInfo = "FAIL";
+                //clubInfo.detailInfo = "FAIL";
             })
         }
         Promise.resolve(this.fetchApi(`${this.baseUrl}teams/${this.teamId}`))
@@ -112,7 +112,7 @@ class DataSource {
         .catch(err => {
             let clubInfo = document.querySelector('football-club');
             console.log(`Error : ${err}`);
-            clubInfo.detailInfo = "FAIL";
+            //clubInfo.detailInfo = "FAIL";
         });
     }
 
