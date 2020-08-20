@@ -124,18 +124,14 @@ nav .brand-logo{
 	font-size:calc(1.2rem + 0.8vw);
 }
 
-#svgWrap_1, #svgWrap_2, div {
-  animation: hueRotate 6s ease-in-out 3s infinite;
+svg.error-nocontent{
+  width:90vw;
+  height:120vw;
 }
 
-#svgWrap_1, #svgWrap_2 {
-  position: absolute;
-  height: auto;
-  width: 600px;
-  max-width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+svg circle{
+  cx:50%;
+  cy:50%;
 }
 
  @media  only screen and (max-width:449px){
